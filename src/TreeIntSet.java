@@ -12,7 +12,10 @@ public class TreeIntSet implements IntSet {
     }
 
     public void add(int value) {
-        if (value > this.value) {
+        if (this.contains(value) == true) {
+            System.out.println(value + " is already present");
+        }
+        else if (value > this.value) {
             if (right == null) {
                 right = new TreeIntSet(value);
             } else {

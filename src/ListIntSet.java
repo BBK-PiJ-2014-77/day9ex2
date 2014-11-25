@@ -12,7 +12,10 @@ public class ListIntSet implements IntSet {
     }
 
     public void add(int value) {
-        if (this.Next == null) {
+        if (this.contains(value)) {
+            System.out.println(value + " is already present");
+        }
+        else if (this.Next == null) {
         this.Next = new ListIntSet(value);
         this.Next.value = value;
         }
@@ -23,7 +26,22 @@ public class ListIntSet implements IntSet {
     }
 
     public boolean contains(int value) {
-        return false;
+        if (this.Next == null) {
+            if (this.value == value){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            if (this.value == value){
+                return true;
+            }
+            else {
+                return this.Next.contains(value);
+            }
+        }
     }
 
     public boolean containVerbose(int value) {
