@@ -12,7 +12,7 @@ public class TreeIntSetTest {
         IT1.add(21);
         IT1.add(7);
 
-        System.out.println("Does IT1 contain 32? " + IT1.contains(2));
+        System.out.println("Does IT1 contain 2? " + IT1.contains(2));
         System.out.println("Does IT1 contain 32? " + IT1.containVerbose(32));
         System.out.println("Does IT1 contain 2? " + IT1.containVerbose(2));
         System.out.println(IT1.toString());
